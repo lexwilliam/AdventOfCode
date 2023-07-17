@@ -3,7 +3,7 @@ package day7
 import java.io.File
 
 fun main() {
-    val commands = File("C:\\Users\\willi\\IdeaProjects\\AdventOfCode\\day7\\input.txt").readLines()
+    val commands = File("C:\\Users\\willi\\IdeaProjects\\AdventOfCode\\day7\\input.txt.txt").readLines()
 
     val sizes = mutableMapOf<String, Int>()
     val stack = mutableListOf<String>()
