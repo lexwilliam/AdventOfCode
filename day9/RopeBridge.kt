@@ -49,6 +49,6 @@ private fun parseInput(input: List<String>): String =
         direction.repeat(numberOfMoves)
     }
 fun main() {
-    println("Part #1: There are ${followPath(2)} positions the tail of the rope visited at least once")
-    println("Part #2: There are ${followPath(10)} positions the tail of the rope visited at least once")
+    println("Part #1: ${followPath(2)}")
+    println("Part #2: ${followPath(10)}")
 }

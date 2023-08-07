@@ -1,6 +1,6 @@
 import java.io.File
 
-fun solveA(input: List<String>): Int {
+fun part1(input: List<String>): Int {
     var pairIndex = 0
     return (0..input.lastIndex step 3).map { i ->
         val list1 = buildList(input[i])
@@ -10,7 +10,7 @@ fun solveA(input: List<String>): Int {
     }.filter { it.second == -1 }.sumOf { it.first }
 }
 
-fun solveB(input: List<String>) = input.filter { it.isNotBlank() }
+fun part2(input: List<String>) = input.filter { it.isNotBlank() }
     .map { buildList(it) }
     .toMutableList()
     .also {
@@ -78,6 +78,6 @@ private fun compare(left: Any, right: Any): Int {
 
 fun main() {
     val input = File("day13/input.txt").readLines()
-    println("Part One: ${solveA(input)}")
-    println("Part Two: ${solveB(input)}")
+    println("Part One: ${part1(input)}")
+    println("Part Two: ${part2(input)}")
 }

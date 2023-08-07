@@ -1,14 +1,14 @@
 import java.io.File
 import java.util.*
 
-fun partOne(filename: String): Int {
+fun part1(filename: String): Int {
     val lines = parseInput(filename)
     val (start, end) = getStartEnd(lines)
     val graph = constructGraph(lines)
     return bfs(graph, start, end)
 }
 
-fun partTwo(filename: String): Int {
+fun part2(filename: String): Int {
     val lines = parseInput(filename)
     val (start, end) = getStartEnd(lines)
     val graph = constructGraph(lines)
@@ -94,6 +94,6 @@ fun bfs(graph: Map<Pair<Int, Int>, Set<Pair<Int, Int>>>, start: Pair<Int, Int>, 
 
 fun main() {
     val inputPath = "day12/input.txt"
-    println(partOne(inputPath))
-    println(partTwo(inputPath))
+    println(part1(inputPath))
+    println(part2(inputPath))
 }

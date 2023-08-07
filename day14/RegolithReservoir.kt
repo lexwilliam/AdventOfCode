@@ -54,13 +54,13 @@ fun simulateSand(fixedPoints: Set<Point>, abyss: Int): Int {
     return points.size - fixedPoints.size
 }
 
-fun solveA(input: List<String>): Int {
+fun part1(input: List<String>): Int {
     val fixedPoints = input.toSetOfPoints()
     val abyss = fixedPoints.maxOf { it.y }
     return simulateSand(fixedPoints = fixedPoints, abyss = abyss)
 }
 
-fun solveB(input: List<String>): Int {
+fun part2(input: List<String>): Int {
     val fixedPoints = input.toSetOfPoints()
     val abyss = fixedPoints.maxOf { it.y } + 2
     val floor = Point(x = 0, y = abyss)..Point(x = 1000, y = abyss)
@@ -68,6 +68,6 @@ fun solveB(input: List<String>): Int {
 }
 fun main() {
     val input = File("day14/input.txt").readLines()
-    println(solveA(input))
-    println(solveB(input))
+    println(part1(input))
+    println(part2(input))
 }

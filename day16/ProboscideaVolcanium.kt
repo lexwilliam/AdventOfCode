@@ -10,7 +10,7 @@ class ValveMap(data: List<String>) {
         calculateShortestPaths()
     }
 
-    fun findMaxFlowRateV2(start: String, minutes: Int, withElephant: Boolean = false): Int {
+    fun findMaxFlowRate(start: String, minutes: Int, withElephant: Boolean = false): Int {
         return depthFirstSearch(
             originalStart = start,
             currentFlow = 0,
@@ -93,5 +93,5 @@ data class Valve(val name: String, val flowRate: Int, val reachableValves: List<
 fun main() {
     val input = File("day16/input.txt").readLines()
     val valveMap = ValveMap(input)
-    println(valveMap.findMaxFlowRateV2("AA", 30))
+    println(valveMap.findMaxFlowRate("AA", 30))
 }

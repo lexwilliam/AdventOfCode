@@ -2,7 +2,7 @@ package day11
 
 import java.io.File
 
-fun solveA(input: List<String>): Long {
+fun part1(input: List<String>): Long {
     val monkeys = input.chunked(7).map { buildMonkeyA(it) }
     return runSimulation(
         20,
@@ -11,7 +11,7 @@ fun solveA(input: List<String>): Long {
     )
 }
 
-fun solveB(input: List<String>): Long {
+fun part2(input: List<String>): Long {
     val monkeys = input.chunked(7).map {
         buildMonkeyB(it)
     }
@@ -99,6 +99,6 @@ sealed class Monkey(private val items: MutableList<Long>, val operation: (Long) 
 
 fun main() {
     val input = File("day11/input.txt").readLines()
-    println(solveA(input))
-    println(solveB(input))
+    println(part1(input))
+    println(part2(input))
 }
