@@ -5,8 +5,8 @@ import kotlin.math.absoluteValue
 import kotlin.math.sign
 
 private val headPath: String = parseInput(File("day9/input.txt").readLines())
-private fun followPath(knots: Int): Int {
-    val rope = Array(knots) { Point() }
+private fun followPath(): Int {
+    val rope = Array(2) { Point() }
     val tailVisits = mutableSetOf(Point())
 
     headPath.forEach { direction ->
@@ -49,6 +49,5 @@ private fun parseInput(input: List<String>): String =
         direction.repeat(numberOfMoves)
     }
 fun main() {
-    println("Part #1: ${followPath(2)}")
-    println("Part #2: ${followPath(10)}")
+    println(followPath())
 }
